@@ -1,0 +1,406 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  /* Light gray background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+  background-color: #c6d4e8;
+  /* Blue header background */
+  color: #ffffff;
+  /* White text color */
+  padding: 20px 0;
+}
+
+.logo {
+  margin-left: 20px;
+  /* Add some spacing to the left of the logo */
+  width: 50px;
+  /* Adjust the width of the logo */
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  /* Align navbar links to the right */
+}
+
+.navbar a {
+  color: #2589ec;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
+}
+
+.navbar a:hover {
+  background-color: #4dfa32;
+  /* Darker blue on hover */
+}
+
+/* Header content */
+.header-content {
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, #2f80f0, #0b8387);
+  /* Bluish-green gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.header-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-size: 18px;
+}
+
+/* Feature Container styles */
+.feature-container {
+  background-color: #ffffff;
+  /* White background */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.why-title {
+  color: #007bff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Image Grid styles */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.grid-title {
+  color: #333333;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333333;
+  /* Dark footer background */
+  color: #ffffff;
+  /* Text color */
+  text-align: center;
+  /* Center align the content */
+  padding: 20px 0;
+  /* Padding for top and bottom */
+}
+
+.footer p {
+  margin: 0;
+  /* Remove default margin for paragraphs */
+}
+
+
+/* Swap Batteries container styles */
+.swap-batteries {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.swap-batteries h2 {
+  color: #0056b3;
+  /* Blue color */
+  font-size: 32px;
+}
+
+/* Battery slot container styles */
+.battery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual battery slot styles */
+.battery-slot {
+  margin: 20px;
+  text-align: center;
+}
+
+.battery-image {
+  width: 800px;
+  /* Adjust size as needed */
+  height: 300px;
+  /* Adjust size as needed */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.battery-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.battery-content h3 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.battery-content p {
+  font-size: 16px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  margin: 10px 0;
+}
+
+.battery-content button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.battery-content button:hover {
+  background-color: #003366;
+}
+
+.about-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.about-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-section .gradient-text {
+  background: linear-gradient(to right, #ff8a00, #da1b60);
+
+}
+
+.contact-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.contact-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.sensor-data {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.sensor-data h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sensor-data-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sensor {
+  width: 30%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sensor h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sensor p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .sensor {
+    width: 100%;
+  }
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .navbar {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .header-content h1 {
+    font-size: 28px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+
+  .swap-batteries h2 {
+    font-size: 28px;
+  }
+
+  .battery-slot {
+    margin: 10px;
+  }
+
+  .battery-content h3 {
+    font-size: 20px;
+  }
+
+  .battery-content p {
+    font-size: 14px;
+  }
+
+  .battery-content button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .battery-image {
+    max-width: 200px;
+    /* Adjust image size for smaller screens */
+  }
+
+ 
+}
+
+#msg{
+  color: #000;
+  display: block;
+  margin-top: 10px;
+}

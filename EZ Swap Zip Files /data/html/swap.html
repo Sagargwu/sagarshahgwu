@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swap | EZ-SWAP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="../images/logo.png" alt="EZ-SWAP Logo" class="logo">
+      <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/swap">Swap</a>
+        <a href="/monitor">Monitor</a>
+        <a href="/contact">Contact</a>
+       
+      </nav>
+    </div>
+    <div class="header-content">
+      <h1 class="gradient-text">Welcome to EZ-SWAP</h1>
+      <p class="gradient-text">Ride more. Wait less.</p>
+    </div>
+  </header>
+
+  
+  <!-- Swap Batteries Container -->
+  <div class="swap-batteries">
+    <h2>Swap Batteries</h2>
+  </div>
+
+  <div class="battery-container">
+    <!-- Battery Slot 1 -->
+    <div class="battery-slot">
+      <div class="battery-image" style="background-image: url('../images/battery_slot1.png')">
+        <div class="battery-content">
+          <h3>Slot 1:</h3>
+          <button onclick="unlockSlot(1)">Unlock</button>
+          <p>Please insert your depleted batteries.</p>
+          <button onclick="lockSlot(1)">Lock</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Battery Slot 2 -->
+    <div class="battery-slot">
+      <div class="battery-image" style="background-image: url('../images/battery_slot2.png')">
+        <div class="battery-content">
+          <h3>Slot 2:</h3>
+          <button onclick="unlockSlot(2)">Unlock</button>
+          <p>Please insert your depleted batteries.</p>
+          <button onclick="lockSlot(2)">Lock</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 EZ-SWAP. All rights reserved.</p>
+        <p>Contact: contact@ezswap.com</p>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./swap.html">Swap</a>
+          <a href="./monitor.html">Monitor</a>
+          <a href="./contact.html">Contact</a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Servo Control -->
+  <script>
+    // Function to unlock battery slot
+    function unlockSlot(slot) {
+      $.get("/servo?slot=" + slot + "&action=1", function(data, status) {
+        console.log("Unlock Slot " + slot + ": " + data);
+      });
+    }
+
+    // Function to lock battery slot
+    function lockSlot(slot) {
+      $.get("/servo?slot=" + slot + "&action=0", function(data, status) {
+        console.log("Lock Slot " + slot + ": " + data);
+      });
+    }
+  </script>
+</body>
+
+</html>

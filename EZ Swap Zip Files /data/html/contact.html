@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swap | EZ-SWAP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="../images/logo.png" alt="EZ-SWAP Logo" class="logo">
+      <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/swap">Swap</a>
+        <a href="/monitor">Monitor</a>
+        <a href="/contact">Contact</a>
+       
+      </nav>
+    </div>
+    <div class="header-content">
+      <h1 class="gradient-text">Welcome to EZ-SWAP</h1>
+      <p class="gradient-text">Ride more. Wait less.</p>
+    </div>
+  </header>
+    <!-- End Header Section -->
+
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Get in touch with us using the form below.</p>
+
+            <div class="contact-form">
+                <form name="submit-to-google-sheet">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="Name" placeholder="Your Name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="Message" placeholder="Your Message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Us Section -->
+
+    <!-- Footer Section -->
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 EZ-SWAP. All rights reserved.</p>
+        <p>Contact: contact@ezswap.com</p>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./swap.html">Swap</a>
+          <a href="./monitor.html">Monitor</a>
+          <a href="./contact.html">Contact</a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- End Footer Section -->
+
+    <!--  new JavaScript file for google sheet connection -->
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbysLI-XZyi-yEalynjX6RTHahOtnrLK7slCCSynIubvEPVTs1LSiX9gwdDICEchlyxQQw/exec';
+            const form = document.forms['submit-to-google-sheet'];
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        console.log('Success!', response);
+                        document.getElementById("msg").innerText = "Form submitted successfully!";
+                        // Reset the form after 2 seconds
+                        setTimeout(() => {
+                            form.reset();
+                            document.getElementById("msg").innerText = "";
+                        }, 2000);
+                    })
+                    .catch(error => console.error('Error!', error.message));
+            });
+
+        </script>
+
+
+</body>
+
+</html>
